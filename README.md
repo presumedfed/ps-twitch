@@ -9,10 +9,15 @@
 - No frameworks like jQuery/AngularJS, please use vanilla JS to implement UX, hit the API and render content
  
 Submit your code to a github repo and send us the link.  You can host the running app on github.io.
- 
 
+## Getting Started
+- install packages - `npm install`
+- build project - `gulp build` (for development `gulp watch`)
+- start node server - `npm start` 
+- browse to http://localhost:3000
+ 
 ## TODO 
 
-- add spinner for when waiting for api to return payload
-- add case for zero search results
+- Add spinner while waiting for api to return
+- support case for search that return zero items
 - debounce the clicks on next/prev

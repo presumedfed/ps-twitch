@@ -1,0 +1,26 @@
+$viewport-xsmall: 320px;
+$viewport-small: 400px;
+$viewport-medium: 600px;
+$viewport-large: 800px;
+$viewport-xlarge: 1200px;
+$viewport-xxlarge: 1600px;
+
+@mixin breakpoint($size) {
+  @if $size == small {
+    @media (min-width: #{$viewport-small}) { @content; }
+  }
+  @else if $size == small {
+    @media (min-width: #{$viewport-small}) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: #{$viewport-medium}) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: #{$viewport-large}) { @content; }
+  }
+  @else if $size == xlarge {
+    @media (min-width: #{$viewport-xlarge}) { @content; }
+  }
+}
+
+

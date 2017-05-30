@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 html {
@@ -5,12 +7,16 @@ html {
 }
 
 body {
+	min-width: 300px;
 	padding-right: 5px;
 }
 
 main {
-	margin: 75px auto;
-	width: 75%;
+
+	@include breakpoint(small) {
+		margin: 75px auto;
+		width: 75%;
+	}
 
 	> header {
 		border: 2px solid #000;
@@ -25,10 +31,17 @@ main {
 }
 
 button, input, label {
+	box-sizing: border-box;
 	font-size: 16px;
-	margin-right: 5px;
+	margin: 10px;
 	outline: none;
 	padding: 10px;
+	width: 100%;
+
+	@include breakpoint(medium) {
+		margin-right: 5px;
+		width: auto;
+	}
 }
 
 button {
@@ -64,11 +77,32 @@ button {
 }
 
 .stream {
-	display: flex;
+	display: block;
 	margin: 0 10px;
+	padding: 15px 0;
+	border-bottom: 1px solid black;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	@include breakpoint(medium) {
+		border-bottom: none;
+		display: flex;
+		padding: 0;
+
+	}
 
 	figure {
 		margin: 10px;
+
+		img {
+			width: 100%;
+
+			@include breakpoint(large) {
+				width: auto;
+			}
+		}
 	}
 
 	.stream-info {
