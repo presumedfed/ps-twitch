@@ -1,14 +1,17 @@
+'use strict';
+
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 
-const target = (process.env.NODE_ENV === 'production') ? 'dist': 'build';
+let target = (process.env.NODE_ENV === 'production') ? 'docs': 'build';
 
 gulp.task('build', ['fonts', 'webpack', 'html', 'sass'], function(){
 })
 
 gulp.task('deploy', ['fonts', 'webpack', 'html', 'sass'], function(){
+  target = 'docs';
 })
 
 gulp.task('fonts', function() {
@@ -27,7 +30,7 @@ gulp.task('sass', function() {
 		includePaths: [
 			'node_modules/font-awesome/scss'
 		]}))
-    .pipe(gulp.dest(target))
+    .pipe(gulp.dest(target + '/css'))
 })
 
 gulp.task('webpack', function() {
