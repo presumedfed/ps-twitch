@@ -1,0 +1,10 @@
+.trans-opacity {
+	opacity: 0;
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+
+	&.show {
+		opacity: 100;
+		visibility: visible;
+	}
+}

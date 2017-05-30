@@ -1,0 +1,21 @@
+.pagination {
+	display: inline-block;
+	margin: 0 10px;
+
+	a {
+		color: #000;
+
+		&:active, &:hover, &:visited {
+			color: #000;
+		}
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	.pagination-count {
+		font-size: smaller;
+		margin: 0 5px;
+	}
+}

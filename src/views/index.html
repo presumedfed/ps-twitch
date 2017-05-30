@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitch</title>
+    <link rel="stylesheet" type="text/css" href="/twitch.css">
+</head>
+<body>
+	<main>
+		<header>
+		 	<label class="sr-only" for="search">Search: </label>
+		  	<input id="search" type="text" placeholder="Search query..." />
+		  	<button>Search</button>
+		</header>
+		<section id="streams" class="trans-opacity">
+			<div id="streams-head">
+				<div id="total">
+					<small>
+						<span>Total results: </span> <span id="count"></span>
+					</small>
+				</div>
+				<ul class="pagination">
+					<li class="pagination-prev">
+						<a href="" class="prev">
+							<i class="fa fa-caret-left"></i>
+							<small class="sr-only">Prev</small>
+						</a>
+					</li>
+					<li class="pagination-count"></li>
+					<li class="pagination-next">
+						<a href="" class="next">
+							<small class="sr-only">Next</small>
+							<i class="fa fa-caret-right"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="streams-content"></div>
+		</section>
+	</main>
+	<script src="twitch.bundle.js"></script>
+</body>
+</html>
+
+
