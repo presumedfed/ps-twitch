@@ -13,13 +13,6 @@ Submit your code to a github repo and send us the link.  You can host the runnin
 
 ## TODO 
 
-- gulp
-- responsive
-- hide arrows for 
--- first page
--- last page
--- count less that limit
-- spinner
-- case for bade search
--- bug in api that returns next link for last page.  need to do a calculation to hide the 'next' icon when on last page. 
+- add spinner for when waiting for api to return payload
+- add case for zero search results
 - debounce the clicks on next/prev
