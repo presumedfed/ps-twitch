@@ -270,6 +270,14 @@
 	      document.getElementById('count').innerHTML = total;
 	      document.getElementsByClassName('pagination-count')[0].innerHTML = page + '/' + pageCount;
 	
+	      // hide pagination when the page number is higher than the pagecount
+	      var pagination = document.querySelector('#streams-head .pagination');
+	      if (page < pageCount) {
+	        pagination.style.display = 'inline-block';
+	      } else {
+	        pagination.style.display = 'none';
+	      }
+	
 	      // TODO: update to support multiple pagination components on the page
 	      var prevEl = document.getElementsByClassName('pagination-prev')[0];
 	      if (prev) {
