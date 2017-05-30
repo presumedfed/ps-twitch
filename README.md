@@ -16,8 +16,9 @@ Submit your code to a github repo and send us the link.  You can host the runnin
 - start node server - `npm start` 
 - browse to http://localhost:3000
  
+
 ## TODO 
 
 - Add spinner while waiting for api to return
-- support case for search that return zero items
 - debounce the clicks on next/prev
+- occasional scaling issue with screenshot on smaller viewports
